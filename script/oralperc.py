@@ -3,6 +3,7 @@ import numpy as np
 import sys, getopt, os
 from Bio.Seq import Seq
 from collections import Counter
+from copy import deepcopy
 
 def blast_against_source(
     query_sequence_fasta:str,   # path of fasta files of query sequences
@@ -21,10 +22,10 @@ def blast_against_source(
     return None
 
 def parse_blast(
-    asv_dict_curr_source: dict,   # keys are HMP ASV IDs, values are corresponding sequences
-    asv_dict_curr_query: dict,  # keys are user-provided ASV IDs, values are corresponding sequences
-    output_dir:str,     # output dir directory
-    verbose:bool=True      # whether to print intermediate results to screen during data processing
+    asv_dict_curr_source:dict,     # keys are source ASV IDs, values are sequences
+    asv_dict_curr_query:dict,      # keys are query ASV IDs, values are sequences
+    source:str,                    # source ID
+    output_dir:str                 # output directory
 )->pd.DataFrame:
     #------------------
     # read blast output
@@ -96,11 +97,10 @@ def parse_blast(
     df_blast_filtered = df_blast_filtered.loc[[idx for idx in df_blast_filtered.index if idx not in rowindex2remove]]
 
     # print number of matched sequences
-    if verbose:
-        print("%d unique user provided sequences are matched to HMP sequences."%(len(set(df_blast_filtered.qseqid))))
+    print("%d unique query sequences are matched to sequences of source %s."%(len(set(df_blast_filtered.qseqid)), source))
 
     # save data to file
-    df_blast_filtered.to_csv("filtered_blast_output.txt", sep="\t", index=False)
+    df_blast_filtered.to_csv("filtered_blast_output_for_source_%s.txt"%(source), sep="\t", index=False)
 
     return df_blast_filtered
 
@@ -108,7 +108,8 @@ def merge_query_source_count_tables(
     df_blast_filtered:pd.DataFrame,     # filtered blast output
     df_query_asv_count:pd.DataFrame,    # count table of query ASVs
     df_source_asv_count:pd.DataFrame,   # count table of source ASVs
-    SourceID:str                        # Source ID
+    source:str,                         # source ID
+    output_dir:str                      # outpur directory
 )->pd.DataFrame:
 
     # Important Notes:
@@ -120,34 +121,34 @@ def merge_query_source_count_tables(
 
     # select and rename filtered blast output
     df2_blast_filtered = deepcopy(df_blast_filtered[['qseqid','sseqid']])
-    df2_blast_filtered.columns = ['QueryASV','source_asv']
+    df2_blast_filtered.columns = ['QueryASV','SourceAsv']
 
     # append a column of matched source ASVs in query count table
     df_query_asv_count = pd.merge(df_query_asv_count, df2_blast_filtered, left_on='QueryASV', right_on='QueryASV', how='left')
 
     # rename query ASVs that are not matched to any source ASV sequence by adding prefix "Unmapped__"
-    df_query_asv_count.loc[df_query_asv_count.source_asv.isnull(), 'source_asv'] = ['Unmapped__'+asv for asv in df_query_asv_count.loc[df_query_asv_count.source_asv.isnull(), 'QueryASV']]
+    df_query_asv_count.loc[df_query_asv_count.source_asv.isnull(), 'SourceAsv'] = ['Unmapped__'+asv for asv in df_query_asv_count.loc[df_query_asv_count.source_asv.isnull(), 'QueryASV']]
 
     # concatenate the two tables
-    df_source_asv_count = df_source_asv_count.rename({'ASV':'source_asv'}, axis=1)
+    df_source_asv_count = df_source_asv_count.rename({'ASV':'SourceAsv'}, axis=1)
     df_source_asv_count.SampleID = ['SOURCE__'+sid for sid in df_source_asv_count.SampleID]
-    df_joined_asv_count = pd.concat([df_query_asv_count[['SampleID','source_asv','Count']], df_source_asv_count[['SampleID','source_asv','Count']]], axis=0)
+    df_joined_asv_count = pd.concat([df_query_asv_count[['SampleID','SourceAsv','Count']], df_source_asv_count[['SampleID','SourceAsv','Count']]], axis=0)
     df_joined_asv_count = df_joined_asv_count[df_joined_asv_count.Count > 0] # remove ASVs of zero count
-    df_joined_asv_count.to_csv("joined_asv_count_for_%s.csv"%(SourceID), sep="\t", index=False)
+    df_joined_asv_count.to_csv("%s/joined_asv_count_for_source_%s.csv"%(output_dir, source), sep="\t", index=False)
 
     return df_joined_asv_count
 
 def build_per_asv_random_forest_model(
     df_source_sample_meta:pd.DataFrame,     # meta data of source
     df_source_asv_count:pd.DataFrame,       # relative abundance of source ASVs (samples by ASVs)
-    output_dir:str,                         # path of output dir
-    num_of_threads:int,                     # number of treads
-    source:str                              # Source ID
+    source:str                              # source ID
+    source_dir:str,                         # path of source dir
+    num_of_threads:int                      # number of treads
 )->pd.DataFrame:
 
     # do not recreate the wheel: check if output file has already been generated
-    if os.path.exists("%s/rf_bodysite_prob_%s.txt"%(output_dir, source)):
-        df_bodysite_rf_cla_source_asvs = pd.read_csv("%s/rf_bodysite_prob_%s.txt"%(output_dir, source), sep="\t")
+    if os.path.exists("%s/rf_bodysite_prob_for_source_%s.txt"%(output_dir, source)):
+        df_bodysite_rf_cla_source_asvs = pd.read_csv("%s/rf_bodysite_prob_for_source_%s.txt"%(output_dir, source), sep="\t")
         return df_bodysite_rf_cla_source_asvs
     else:
         # convert count to relative abundance
@@ -187,11 +188,11 @@ def build_per_asv_random_forest_model(
     # run in parallel for all source ASVs
     bodysite_probs = Parallel(n_jobs=num_of_threads)(delayed(build_rf)(asv) for asv in df_source_asv_relab.index)
     df_bodysite_rf_cla_source_asvs = pd.concat(bodysite_probs, ignore_index=True)
-    df_bodysite_rf_cla_source_asvs.to_csv("%s/rf_bodysite_prob_%s.txt"%(output_dir, source), sep="\t", index=False)
+    df_bodysite_rf_cla_source_asvs.to_csv("%s/rf_bodysite_prob_for_source_%s.txt"%(output_dir, source), sep="\t", index=False)
 
     return df_bodysite_rf_cla_source_asvs
 
-def quantify_oral_bacteria_fraction(
+def predict_oral_percentage(
     df_bodysite_rf_cla_source_asvs:pd.DataFrame,    # body site classification for source ASVs
     df_joined_asv_count:pd.DataFrame,               # joined (both query and source) asv count table
     num_of_threads:int,                             # number of treads
@@ -206,7 +207,7 @@ def quantify_oral_bacteria_fraction(
     # get all environment categories
     all_unique_envs = list(set(df_bodysite_rf_cla_source_asvs.BodySite))
 
-    def identify_source_proportions(sid):
+    def identify_source_percentages(sid):
         df_curr_sample = deepcopy(df_query_asv_relab.loc[sid])
         df_curr_sample = df_curr_sample[df_curr_sample>0].to_frame()
         res = [sid.lstrip("QUERY__")] + [0]*(len(all_unique_envs)+1)
@@ -225,11 +226,11 @@ def quantify_oral_bacteria_fraction(
                 res[-1] += query_relab
         return res
 
-    source_proportions = Parallel(n_jobs=num_of_threads)(delayed(identify_source_proportions)(sid) for sid in df_query_asv_relab.index)
-    df_source_proportions = pd.DataFrame(source_proportion, columns=['SampleID']+all_unique_envs+['Unknown']).set_index('SampleID').stack().reset_index()
-    df_source_proportions.columns = ['SampleID', 'Environment','Proportion']
+    source_percentages = Parallel(n_jobs=num_of_threads)(delayed(identify_source_percentages)(sid) for sid in df_query_asv_relab.index)
+    df_source_percentages = pd.DataFrame(source_proportion, columns=['SampleID']+all_unique_envs+['Unknown']).set_index('SampleID').stack().reset_index()
+    df_source_percentages.columns = ['SampleID', 'Environment','Percentage']
 
-    return df_source_proportions
+    return df_source_percentages
 
 #------------------------
 # Main program
@@ -244,11 +245,9 @@ if __name__ == "__main__":
     # --usage
     # --query_feature_table <required>: a txt table with ASVs on the rows and samples on the columns
     # --query_asv_sequences <required>: a fasta file of ASV sequences
-    # --HMP_source_dir: directory of HMP sources
-    # --customized_source_dir: directory of user provided sources
-    #                        : Both HMP_source_dir and customized_source_dir directories should contain 3 files: sample_meta, feature_table, and asv_sequences
+    # --source_dir: directory of sources. Each source subdirectory has at least three data files: sample_meta, feature_table, and asv_sequences.
     # --which_source: the source will be used against all samples (for heterogenous sources, use source_mapping_file instead)
-    # --source_mapping_file: specify which sources are used against samples
+    # --source_mapping_file: heterogenous sources exist and specify which sources are used against samples
     # --inference_method [default RF]: choose between FEAST and RF (Random Forest)
     # --max_feast_runs [default 5]: maximum number of samples run by feast simutaneously (used only when method == feast)
     # --evalue_cutoff [default 1e-10]: evalue cutoff
@@ -256,8 +255,7 @@ if __name__ == "__main__":
     # --output_dir [default './output']: directory of all output files
 
     # default parameters
-    HMP_source_dir = None
-    customized_source_dir = None
+    source_dir = None
     which_source = None
     source_mapping_file = None
     inference_method = "RF"
@@ -269,26 +267,24 @@ if __name__ == "__main__":
 
     # parse command line
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"uf:a:hcwsimenpo",["usage","query_feature_table=", "query_asv_sequences=", "HMP_source_dir", "customized_source_dir",
-                                                                  "which_source", "source_mapping_file", "inference_method", "max_feast_runs", "evalue_cutoff",
-                                                                  "num_of_threads", "prevalence_cutoff", "output_dir"])
+        opts, args = getopt.getopt(sys.argv[1:],"uf:a:d:wsimenpo",["usage","query_feature_table=", "query_asv_sequences=", "source_dir",
+                                                                   "which_source", "source_mapping_file", "inference_method", "max_feast_runs", "evalue_cutoff",
+                                                                   "num_of_threads", "prevalence_cutoff", "output_dir"])
     except getopt.GetoptError:
-        print('percoral.py -u -f <query_feature_table> -a <query_asv_sequences> -h [HMP_source_dir] -c [customized_source_dir] -w [which_source] -s [source_mapping_file]
+        print('oralperc.py -u -f <query_feature_table> -a <query_asv_sequences> -d <source_dir> -w [which_source] -s [source_mapping_file]
                -i [inference_method] -m [max_feast_runs] -e [evalue_cutoff] -n [num_of_threads] -p [prevalence_cutoff] -o [output_dir]')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-u':
-            print('percoral.py -u -f <query_feature_table> -a <query_asv_sequences> -h [HMP_source_dir] -c [customized_source_dir] -w [which_source] -s [source_mapping_file]
+            print('oralperc.py -u -f <query_feature_table> -a <query_asv_sequences> -d <source_dir> -w [which_source] -s [source_mapping_file]
                   -i [inference_method] -m [max_feast_runs] -e [evalue_cutoff] -n [num_of_threads] -p [prevalence_cutoff] -o [output_dir]')
             sys.exit(0)
         elif opt in ("-f", "--query_feature_table"):
             query_feature_table = arg
         elif opt in ("-a", "--query_asv_sequences"):
             query_asv_sequences = arg
-        elif opt in ("-h", "--HMP_source_dir"):
-            HMP_source_dir = arg
-        elif opt in ("-c", "--customized_source_dir"):
-            customized_source_dir = arg
+        elif opt in ("-d", "--source_dir"):
+            source_dir = arg
         elif opt in ("-w", "which_source"):
             which_source = arg
         elif opt in ("-s", "source_mapping_file"):
@@ -306,11 +302,6 @@ if __name__ == "__main__":
         elif opt in ("-o", "--output_dir"):
             output_dir = arg
 
-    if HMP_source_dir is None and customized_source_dir is None:
-        raise RuntimeError("could not find source files (both HMP_source_dir and customized_source_dir are none).")
-    if which_source is None and source_mapping_file is None:
-        raise RuntimeError("source(s) are not specified (both which_source and source_mapping_file are none).")
-
     #----------------------
     # Load query microbiome
     #----------------------
@@ -320,73 +311,74 @@ if __name__ == "__main__":
 
     # read feature table
     df_query_feature_table = pd.read_csv(query_feature_table, sep="\t")
-    if list(df_query_feature_table.columns).sort() != ['ASV','Count','SampleID']:
-        # convert to long format
-        df_query_feature_table = df_query_feature_table.set_index('ASV').stack().reset_index()
+    if ("ASV" not in list(df_query_feature_table.columns)) or ("Count" not in list(df_query_feature_table.columns)) or ("SampleID" not in list(df_query_feature_table.columns)):
+        df_query_feature_table = pd.read_csv(query_feature_table, sep="\t", index_col=0).stack().reset_index()
         df_query_feature_table.columns = ['ASV', 'SampleID', 'Count']
+    else:
+        df_query_feature_table = df_query_feature_table[['ASV', 'SampleID', 'Count']]
 
     #-----------------------------------------
     # Check if all required source files exist
     #-----------------------------------------
-    dict_source_path = {}
-    if customized_source is None:
-        dict_source_path[HMP_source] = "../HMP_sources/%s"%(HMP_source)
-    else:
-        if customized_source_dir is None:
-            raise RuntimeError("customized_source_dir is not given.")
-        df_customized_sources = pd.read_csv(customized_source, sep="\t")
-        if list(df_customized_sources.columns).sort() != ['SampleID','SourceID']:
-            raise RuntimeError("only two columns are allowed in customized source file: SampleID and SourceID.")
+    dict_source_path = {} # keys: source id, values: path to data files of each source
+    if which_source is not None:
+        if os.path.exists("%s/%s"%(source_dir, which_source)):
+            raise RuntimeError("could not find data folder for source %s."%(which_source))
         else:
-            unique_sources = set(df_customized_sources.SourceID)
+            dict_source_path[which_source] = "%s/%s"%(source_dir, which_source)
+    elif source_mapping_file is not None:
+        df_heterogenous_sources = pd.read_csv(source_mapping_file, sep="\t")
+        if ("SampleID" not in list(df_heterogenous_sources.columns) or "SourceID" not in list(df_heterogenous_sources.columns):
+            raise RuntimeError("could not find SampleID or SourceID in source mapping file.")
+        else:
+            df_heterogenous_sources = df_heterogenous_sources[['SampleID', 'SourceID']]
+            unique_sources = set(df_heterogenous_sources.SourceID)
             for source in unique_sources:
-                if not source.startswith("HMP_"):
-                    # User provided source
-
-                    # source folder exists?
-                    if os.path.exists("%s/%s"%(customized_source_dir, source)):
-                        raise RuntimeError("could not find data folder for source %s."%(source))
-                    # sample metadata exists?
-                    if not os.path.exists("%s/%s/sample_meta.txt"%(customized_source_dir, source)):
-                        raise RuntimeError("could not find sample metadata for source %s."%(source))
-                    # feature table exists?
-                    if not os.path.exists("%s/%s/feature_table.txt"%(customized_source_dir, source)):
-                        raise RuntimeError("could not find feature table for source %s."%(source))
-                    # asv sequences exist?
-                    if not os.path_exists("%s/%s/asv_sequences.fasta"%(customized_source_dir, source)):
-                        raise RuntimeError("could not find sequence file in fasta format for source %s."%(source))
-                    # blast database file exist? (check .nhr file)
-                    # if not, create blast database files
-                    if not os.path_exists("%s/%s/%s.nhr"%(customized_source_dir, source, source)):
-                        ok = os.system("makeblastdb -in %s/%s/asv_sequences.fasta -title %s -dbtype nucl -out %s/%s/"%(customized_source_dir, source, source, customized_source_dir, source))
-                        if ok != 0:
-                            raise RuntimeError("makeblastdb fails against fasta file %s/%s/asv_sequences.fasta."%(customized_source_dir, source))
-                        else:
-                            dict_source_path[source] = "%s/%s/"%(customized_source_dir, source)
-                else:
-                    # HMP source
-                    dict_source_path[source] = "../HMP_sources/%s"%(source)
+                # source folder exists?
+                if os.path.exists("%s/%s"%(source_dir, source)):
+                    raise RuntimeError("could not find data folder for source %s."%(source))
+                # sample metadata exists?
+                if not os.path.exists("%s/%s/sample_meta.txt"%(source_dir, source)):
+                    raise RuntimeError("could not find sample metadata for source %s."%(source))
+                # feature table exists?
+                if not os.path.exists("%s/%s/feature_table.txt"%(source_dir, source)):
+                    raise RuntimeError("could not find feature table for source %s."%(source))
+                # asv sequences exist?
+                if not os.path_exists("%s/%s/asv_sequences.fasta"%(source_dir, source)):
+                    raise RuntimeError("could not find sequence file in fasta format for source %s."%(source))
+                # blast database file exist? (check .nhr file as a marker)
+                # if not, create blast database files
+                if not os.path_exists("%s/%s/%s.nhr"%(source_dir, source, source)):
+                    ok = os.system("makeblastdb -in %s/%s/asv_sequences.fasta -title %s -dbtype nucl -out %s/%s/"%(source_dir, source, source, source_dir, source))
+                    if ok != 0:
+                        raise RuntimeError("makeblastdb fails against fasta file %s/%s/asv_sequences.fasta."%(source_dir, source))
+                    else:
+                        dict_source_path[source] = "%s/%s/"%(source_dir, source)
+    else:
+        raise RuntimeError("source(s) are not specified (either of which_source and source_mapping_file needs to be nonempty).")
 
     #--------------------------------------------------------------
     # quantify oral bacterial fraction for query microbiome samples
     #--------------------------------------------------------------
-    if inference_method == "RF":
-        df_rf_summary = None
+    if inference_method in ["FEAST", "RF"]:
+        df_oralperc_output_summary = None
+    else:
+        raise RuntimeError("unknown inference method: %s."%(inference_method))
+
     for source, source_path in dict_source_path.items():
 
         # read feature table of source microbiome
-        df_source_feature_table = pd.read_csv("%s/%s/feature_table.txt"%(customized_source_dir, source), sep="\t")
-        if list(df_source_feature_table.columns).sort() != ['ASV','Count','SampleID']:
-           # convert to long format
-           df_source_feature_table = df_source_feature_table.set_index('ASV').stack().reset_index()
-           df_source_feature_table.columns = ['ASV', 'SampleID', 'Count']
+        df_source_feature_table = pd.read_csv("%s/%s/feature_table.txt"%(source_dir, source), sep="\t")
+        if ("ASV" not in list(df_source_feature_table.columns)) or ("Count" not in list(df_source_feature_table.columns)) or ("SampleID" not in list(df_source_feature_table.columns))
+            df_source_feature_table = pd.read_csv("%s/%s/feature_table.txt"%(source_dir, source), sep="\t", index_col=0).stack().reset_index()
+            df_source_feature_table.columns = ['ASV', 'SampleID', 'Count']
+        else:
+            df_source_feature_table = df_source_feature_table[['ASV', 'SampleID', 'Count']]
 
         # read sample metadata of source microbiome
-        df_source_sample_meta = pd.read_csv("%s/%s/sample_meta.txt"%(customized_source_dir, source), sep="\t")
-        if "SampleID" not in list(df_source_sample_meta.columns):
-            raise RuntimeError("SampleID is not a column name in sample metadata file of %s."%(source))
-        if "Environment" not in list(df_source_sample_meta.columns):
-            raise RuntimeError("Environment is not a column name in sample metadata file of %s."%(source))
+        df_source_sample_meta = pd.read_csv("%s/%s/sample_meta.txt"%(source_dir, source), sep="\t")
+        if ("SampleID" not in list(df_source_sample_meta.columns)) or ("Environment" not in list(df_source_sample_meta.columns)):
+            raise RuntimeError("could not find SampleID or Environment in sample metadata file of source %s."%(source))
 
         # check for consistency of SampleIDs between feature table and sample metadata
         common_samples = set(df_source_sample_meta.SampleID).intersection(set(df_source_feature_table.SampleID))
@@ -394,19 +386,19 @@ if __name__ == "__main__":
         df_source_feature_table = df_source_feature_table[df_source_feature_table.SampleID.isin(common_samples)]
 
         # find query microbiome samples that use the current source
-        query_samples_using_curr_source = list(set(df_customized_sources[df_customized_sources.SourceID==source].SampleID))
+        query_samples_using_curr_source = list(set(df_heterogenous_sources[df_heterogenous_sources.SourceID==source].SampleID))
         df_query_feature_table_curr_source = deepcopy(df_query_feature_table[df_query_feature_table.SampleID.isin(query_samples_using_curr_source)])
         df_query_feature_table_curr_source = df_query_feature_table_curr_source.loc[~(df_query_feature_table_curr_source==0).all(axis=1)] # remove source ASVs that are zero for all samples
 
         # read source asv sequences
-        asv_sequences_curr_source = SeqIO.parse(open("%s/%s/asv_sequences.fasta"%(customized_source_dir, source)), 'fasta')
+        asv_sequences_curr_source = SeqIO.parse(open("%s/%s/asv_sequences.fasta"%(source_dir, source)), 'fasta')
         asv_dict_curr_source = {}
         for fasta in asv_sequences_curr_source:
             asv_dict_curr_source[fasta.id] = str(fasta.seq)
 
         # write a temporary fasta file for current query ASVs
         asv_dict_curr_query = {}
-        with open("%s/current_obj_query_asv_sequences.fasta"%(output_dir)) as out_file:
+        with open("%s/current_query_asv_sequences.fasta"%(output_dir)) as out_file:
             for fasta in obj_query_asv_sequences:
                 asv, seq = fasta.id, str(fasta.seq)
                 if asv in list(df_query_feature_table_curr_source.index):
@@ -415,7 +407,7 @@ if __name__ == "__main__":
 
         # blast against source: the blast output file is saved in the output dir
         blast_against_source(
-            query_sequence_fasta = "%s/current_obj_query_asv_sequences.fasta"%(output_dir),
+            query_sequence_fasta = "%s/current_query_asv_sequences.fasta"%(output_dir),
             source = source,
             source_path = dict_source_path[source],
             evalue_cutoff = evalue_cutoff,
@@ -424,7 +416,7 @@ if __name__ == "__main__":
         )
 
         # remove temporary query sequence fasta file
-        os.system("rm %s/current_obj_query_asv_sequences.fasta"%(output_dir))
+        os.system("rm %s/current_query_asv_sequences.fasta"%(output_dir))
 
         # parse and filter blast output
         df_blast_filtered = parse_blast(
@@ -441,7 +433,7 @@ if __name__ == "__main__":
             SourceID = source
         )
 
-        # quantify oral fraction
+        # predict oral percentage in query samples
         if inference_method == "FEAST":
             # generate FEAST input files
 
@@ -492,46 +484,42 @@ if __name__ == "__main__":
             df_bodysite_rf_cla_source_asvs = build_per_asv_random_forest_model(
                 df_source_sample_meta = df_source_sample_meta,
                 df_source_asv_count = df_source_feature_table,
-                output_dir = output_dir,
-                num_of_threads = num_of_threads,
-                source = source
+                source = source,
+                source_dir = source_dir,
+                num_of_threads = num_of_threads
             )
 
             # quantify oral bacterial fraction
-            df_source_proportions = quantify_oral_bacteria_fraction(
+            df_source_percentages = predict_oral_percentage(
                 df_bodysite_rf_cla_source_asvs = df_bodysite_rf_cla_source_asvs,
                 df_joined_asv_count = df_joined_asv_count,
                 num_of_threads = num_of_threads,
                 prevalence_cutoff = prevalence_cutoff
             )
 
-            if df_rf_summary is None:
-                df_rf_summary = deepcopy(df_source_proportions)
+            if df_oralperc_output_summary is None:
+                df_oralperc_output_summary = deepcopy(df_source_percentages)
             else:
-                df_rf_summary = pd.concat([df_rf_summary, df_source_proportions], axis=0)
-
-        else:
-            raise RuntimeError("unknown inference method: %s."%(inference_method))
+                df_oralperc_output_summary = pd.concat([df_oralperc_output_summary, df_source_percentages], axis=0)
 
     #-------------------------------------------------
     # Generate a summary table if using FEAST and save
     #-------------------------------------------------
     if inference_method == "FEAST":
-        df_feast_summary = None
         for sid in df_query_feature_table.columns:
             feast_ofile = "%s/%s_source_contributions_matrix.txt"%(output_dir, sid)
             if os.path.exists(feast_ofile):
                 df_res = pd.read_csv(feast_ofile, sep="\t").T.reset_index()
-                df_res.columns = ['Environment', 'Fraction']
+                df_res.columns = ['Environment', 'Percentage']
                 df_res['SampleID'] = sid
-                if df_feast_summary is None:
-                    df_feast_summary = deepcopy(df_res)
+                if df_oralperc_output_summary is None:
+                    df_oralperc_output_summary = deepcopy(df_res)
                 else:
-                    df_feast_summary = pd.concat([df_feast_summary, df_res], axis=0)
-        df_feast_summary = df_feast_summary[df_feast_summary.Fraction > 0.0]
-        df_feast_summary = pd.pivot_table(df_feast_summary, index='SampleID', columns='Environment', values='Fraction', aggfunc=np.sum).fillna(0)
-        df_feast_summary.to_csv("Feast_oral_fraction_summary.txt", sep="\t")
+                    df_oralperc_output_summary = pd.concat([df_oralperc_output_summary, df_res], axis=0)
+        df_oralperc_output_summary = df_oralperc_output_summary[df_oralperc_output_summary.Percentage > 0.0]
+        df_oralperc_output_summary = pd.pivot_table(df_oralperc_output_summary, index='SampleID', columns='Environment', values='Percentage', aggfunc=np.sum).fillna(0)
+        df_oralperc_output_summary.to_csv("%s/Feast_oral_percentage_summary.txt"%(output_dir), sep="\t")
     elif inference_method == "RF":
-        df_rf_summary = pd.pivot_table(df_rf_summary, index="SampleID", columns="Environment", values="Proportion")
-        df_rf_summary.to_csv("Random_Forest_oral_fraction_summary.txt", sep="\t")
+        df_oralperc_output_summary = pd.pivot_table(df_oralperc_output_summary, index="SampleID", columns="Environment", values="Percentage")
+        df_oralperc_output_summary.to_csv("%s/Random_Forest_oral_percentage_summary.txt"%(source_dir), sep="\t")
 
