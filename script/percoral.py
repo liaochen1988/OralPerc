@@ -241,12 +241,14 @@ if __name__ == "__main__":
     #----------------------------
 
     # parse command line arguments
-    # --help
-    # --feature_table <required>: a txt table with ASVs on the rows and samples on the columns
-    # --asv_sequences <required>: a fasta file of ASV sequences
-    # --HMP_source [default HMP_16S_v35]: choose between HMP_16S_v13, HMP_16S_v35 and HMP_16S_v69 (this parameter is used only when sample_meta does not specify the sources explicitly)
-    # --customized_source_dir [default None]: directory of potential microbial sources
-    #                                       : each source directory should contain 3 files: sample_meta, feature_table, and asv_sequences
+    # --usage
+    # --query_feature_table <required>: a txt table with ASVs on the rows and samples on the columns
+    # --query_asv_sequences <required>: a fasta file of ASV sequences
+    # --HMP_source_dir: directory of HMP sources
+    # --customized_source_dir: directory of user provided sources
+    #                        : Both HMP_source_dir and customized_source_dir directories should contain 3 files: sample_meta, feature_table, and asv_sequences
+    # --which_source: the source will be used against all samples (for heterogenous sources, use source_mapping_file instead)
+    # --source_mapping_file: specify which sources are used against samples
     # --inference_method [default RF]: choose between FEAST and RF (Random Forest)
     # --max_feast_runs [default 5]: maximum number of samples run by feast simutaneously (used only when method == feast)
     # --evalue_cutoff [default 1e-10]: evalue cutoff
@@ -254,9 +256,10 @@ if __name__ == "__main__":
     # --output_dir [default './output']: directory of all output files
 
     # default parameters
-    HMP_source = "HMP_16S_v35"
-    customized_source = None
+    HMP_source_dir = None
     customized_source_dir = None
+    which_source = None
+    source_mapping_file = None
     inference_method = "RF"
     max_feast_runs = 5
     evalue_cutoff = 1e-10
@@ -266,50 +269,57 @@ if __name__ == "__main__":
 
     # parse command line
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hf:a:pcdimbnvo",["help","feature_table=", "asv_sequences=", "HMP_source",
-                                                                 "customized_source", "customized_source_dir", "inference_method",
-                                                                 "max_feast_runs", "evalue_cutoff", "num_of_threads", "prevalence_cutoff", "output_dir"])
+        opts, args = getopt.getopt(sys.argv[1:],"uf:a:hcwsimenpo",["usage","query_feature_table=", "query_asv_sequences=", "HMP_source_dir", "customized_source_dir",
+                                                                  "which_source", "source_mapping_file", "inference_method", "max_feast_runs", "evalue_cutoff",
+                                                                  "num_of_threads", "prevalence_cutoff", "output_dir"])
     except getopt.GetoptError:
-        print('oral_bacteria_detector.py -h -f <feature_table> -a <asv_sequences> -p [HMP_source] -c [customized_source] -d [customized_source_dir]
-               -i [inference_method] -m [max_feast_runs] -b [evalue_cutoff] -n [num_of_threads] -v [prevalence_cutoff] -o [output_dir]')
+        print('percoral.py -u -f <query_feature_table> -a <query_asv_sequences> -h [HMP_source_dir] -c [customized_source_dir] -w [which_source] -s [source_mapping_file]
+               -i [inference_method] -m [max_feast_runs] -e [evalue_cutoff] -n [num_of_threads] -p [prevalence_cutoff] -o [output_dir]')
         sys.exit(2)
     for opt, arg in opts:
-        if opt == '-h':
-            print('oral_bacteria_detector.py -h -f <feature_table> -a <asv_sequences> -p [HMP_source] -c [customized_source] -d [customized_source_dir]
-                   -i [inference_method] -m [max_feast_runs] -b [evalue_cutoff] -n [num_of_threads] -v [prevalence_cutoff] -o [output_dir]')
+        if opt == '-u':
+            print('percoral.py -u -f <query_feature_table> -a <query_asv_sequences> -h [HMP_source_dir] -c [customized_source_dir] -w [which_source] -s [source_mapping_file]
+                  -i [inference_method] -m [max_feast_runs] -e [evalue_cutoff] -n [num_of_threads] -p [prevalence_cutoff] -o [output_dir]')
             sys.exit(0)
-        elif opt in ("-f", "--feature_table"):
-            feature_table = arg
-        elif opt in ("-a", "--asv_sequences"):
-            asv_sequences = arg
-        elif opt in ("-p", "--HMP_source"):
-            HMP_source = arg
-        elif opt in ("-c", "--customized_source"):
-            customized_source = arg
-        elif opt in ("-d", "customized_source_dir"):
+        elif opt in ("-f", "--query_feature_table"):
+            query_feature_table = arg
+        elif opt in ("-a", "--query_asv_sequences"):
+            query_asv_sequences = arg
+        elif opt in ("-h", "--HMP_source_dir"):
+            HMP_source_dir = arg
+        elif opt in ("-c", "--customized_source_dir"):
             customized_source_dir = arg
+        elif opt in ("-w", "which_source"):
+            which_source = arg
+        elif opt in ("-s", "source_mapping_file"):
+            source_mapping_file = arg
         elif opt in ("-i", "--inference_method"):
             inference_method = arg
         elif opt in ("-m", "--max_feast_runs"):
             max_feast_runs = arg
-        elif opt in ("-b", "--evalue_cutoff"):
+        elif opt in ("-e", "--evalue_cutoff"):
             evalue_cutoff = arg
         elif opt in ("-n", "--num_of_threads"):
             num_of_threads = arg
-        elif opt in ("-v", "--prevalence_cutoff"):
+        elif opt in ("-p", "--prevalence_cutoff"):
             prevalence_cutoff = arg
         elif opt in ("-o", "--output_dir"):
             output_dir = arg
+
+    if HMP_source_dir is None and customized_source_dir is None:
+        raise RuntimeError("could not find source files (both HMP_source_dir and customized_source_dir are none).")
+    if which_source is None and source_mapping_file is None:
+        raise RuntimeError("source(s) are not specified (both which_source and source_mapping_file are none).")
 
     #----------------------
     # Load query microbiome
     #----------------------
 
     # read ASV sequences
-    query_asv_sequences = SeqIO.parse(open(asv_sequences), 'fasta')
+    obj_query_asv_sequences = SeqIO.parse(open(query_asv_sequences), 'fasta')
 
     # read feature table
-    df_query_feature_table = pd.read_csv(feature_table, sep="\t")
+    df_query_feature_table = pd.read_csv(query_feature_table, sep="\t")
     if list(df_query_feature_table.columns).sort() != ['ASV','Count','SampleID']:
         # convert to long format
         df_query_feature_table = df_query_feature_table.set_index('ASV').stack().reset_index()
@@ -396,8 +406,8 @@ if __name__ == "__main__":
 
         # write a temporary fasta file for current query ASVs
         asv_dict_curr_query = {}
-        with open("%s/current_query_asv_sequences.fasta"%(output_dir)) as out_file:
-            for fasta in query_asv_sequences:
+        with open("%s/current_obj_query_asv_sequences.fasta"%(output_dir)) as out_file:
+            for fasta in obj_query_asv_sequences:
                 asv, seq = fasta.id, str(fasta.seq)
                 if asv in list(df_query_feature_table_curr_source.index):
                     asv_dict_curr_query[asv] = seq
@@ -405,7 +415,7 @@ if __name__ == "__main__":
 
         # blast against source: the blast output file is saved in the output dir
         blast_against_source(
-            query_sequence_fasta = "%s/current_query_asv_sequences.fasta"%(output_dir),
+            query_sequence_fasta = "%s/current_obj_query_asv_sequences.fasta"%(output_dir),
             source = source,
             source_path = dict_source_path[source],
             evalue_cutoff = evalue_cutoff,
@@ -414,7 +424,7 @@ if __name__ == "__main__":
         )
 
         # remove temporary query sequence fasta file
-        os.system("rm %s/current_query_asv_sequences.fasta"%(output_dir))
+        os.system("rm %s/current_obj_query_asv_sequences.fasta"%(output_dir))
 
         # parse and filter blast output
         df_blast_filtered = parse_blast(
