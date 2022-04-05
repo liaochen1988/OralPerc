@@ -1,0 +1,1 @@
+read  https://www.drive5.com/usearch/manual/quality_score.html to better understand if the phred is 33 or 64
