@@ -1,0 +1,3 @@
+SampleID	Env	SourceSink	id
+SRR5989525	Query	Sink	1
+SRR5989621	SOURCE__saliva	Source	1

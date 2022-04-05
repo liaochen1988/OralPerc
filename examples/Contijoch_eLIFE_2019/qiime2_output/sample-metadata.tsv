@@ -1,0 +1,454 @@
+sample-id	sample-name	sequencing-assay	time-point	subject-id	microbial-density	reference-date	treatment	disease	antibiotic-exposure	detailed-diagnosis	body-site	body-sub-site	study	quantitative-assay	patient-geo
+SRR6146647	1001216.0B5.081914.jgbsq	Amplicon	Day 0	1001216	0.1221	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146648	1001216.0C2.082014.o3lcl	Amplicon	Day 0	1001216	0.0484	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146649	1001216.0F5.082614.doth3	Amplicon	Day 7	1001216	0.1835	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146650	1001216.0G5.090914.4LnVN	Amplicon	Day 28	1001216	0.1636	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146681	EFZ51740A	Amplicon		1100059	0.062733375			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146682	EFZ210552A	Amplicon		1100041	0.088808611			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146683	EFZ51346A	Amplicon		1100037	0.227794929			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146684	EFZ211958A	Amplicon		1100034	0.05896489			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146685	EFZ58349A	Amplicon		1100026	0.047637564			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146686	EFZ53140A	Amplicon		1100025	0.016818469			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146687	EFZ51730A	Amplicon		1100017	0.134500222			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146688	EFZ53102A	Amplicon		1100014	0.099881052			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146689	1001312.0B1.030415.QyhXr	Amplicon	Day 0	1001312	0.0979	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146690	1001311.0B1.030415.i863i	Amplicon	Day 0	1001311	0.1716	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146713	1001166.0F4.071414.oql58	Amplicon	Day 7	1001166	0.0948	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146719	1001166.0G5.081114.qgiTi	Amplicon	Day 28	1001166	0.1946	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146723	1001282.0F1.021115.DTnWP	Amplicon	Day 7	1001282	0.1394	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146724	1001282.0D2.020515.1i1u1	Amplicon	Day 1	1001282	0.0975	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146725	1001282.0B3.020315.XslpL	Amplicon	Day 0	1001282	0.0049	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146726	1001282.000000H4.080888.MrFC6	Amplicon	Day 56	1001282	0.2501	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146727	1001283.0B1.020615.oSsU4	Amplicon	Day 0	1001283	0.2634	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146728	1001283.000000B4.030515.mne74	Amplicon	Day 0	1001283	0.3143	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146729	1001283.000000B3.031115.VTvyy	Amplicon	Day 0	1001283	0.385	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146730	1001282.0G1.030215.jR2hv	Amplicon	Day 28	1001282	0.1863	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146731	1001136.0B2.060414.1RHf3	Amplicon	Day 0	1001136	0.2478	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146732	1001165.0C2.070914.XJk29	Amplicon	Day 0	1001165	0.1015	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146733	1001283.0B1.022515.FdBgn	Amplicon	Day 0	1001283	0.2259	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146734	1001283.0B1.021115.lOw8v	Amplicon	Day 0	1001283	0.2275	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146735	1001166.0B1.070914.yW6D5	Amplicon	Day 0	1001166	0.1372	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146736	1001166.0C2.071014.3jvKf	Amplicon	Day 0	1001166	0.1317	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146737	1001165.0F1.072314.nCkSf	Amplicon	Day 7	1001165	0.1227	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146738	1001165.0G4.080314.I3rPu	Amplicon	Day 28	1001165	0.1115	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146739	1001099.0B2.050814.lcrug	Amplicon	Day 0	1001099	0.3483	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146740	1001135.0C2.060414.4IcvC	Amplicon	Day 0	1001135	0.0338	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146754	1001270.0D1.111914.E3pXY	Amplicon	Day 1	1001270	0.0593	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146758	1001270.0B1.111814.VmQbN	Amplicon	Day 0	1001270	0.1263	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146770	1001272.000000J3.120715.qpNnj	Amplicon	Day 182	1001272	0.2845	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146771	1001272.000000F3.120214.ab5YJ	Amplicon	Day 7	1001272	0.2739	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146773	1001241.0C2.091214.9r8xc	Amplicon	Day 0	1001241	0.0442	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146774	1001241.0B5.091114.VzaIj	Amplicon	Day 0	1001241	0.0627	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146775	1001241.000000I4.092515.0X9q7	Amplicon	Day 182	1001241	0.0356	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146776	1001241.000000D3.091414.VPIp3	Amplicon	Day 1	1001241	0.2044	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146777	1001240.0C2.091214.8KmC1	Amplicon	Day 0	1001240	0.1678	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146778	1001240.0B3.091114.Y86lM	Amplicon	Day 0	1001240	0.0564	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146824	1001254.0H1.121014.PMWoe	Amplicon	Day 56	1001254	0.3341	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146827	1001254.0B3.101514.RoYSI	Amplicon	Day 0	1001254	0.2185	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146828	1001254.0E5.102114.bUmTY	Amplicon	Day 2	1001254	0.1643	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146829	1001254.000000J4.120115.0fwdb	Amplicon	Day 365	1001254	0.1346	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146830	1001254.0A1.101314.CgLDG	Amplicon	Day -7	1001254	0.2087	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146832	1001262.0B2.101714.Yscye	Amplicon	Day 0	1001262	0.1059	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146833	1001254.0F4.102314.j4wOs	Amplicon	Day 7	1001254	0.2982	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146834	1001254.0G1.112814.hFvRE	Amplicon	Day 28	1001254	0.1485	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146837	1001270.000000I4.070915.nk7bG	Amplicon	Day 182	1001270	0.1732	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146838	1001270.000000J5.120115.16V1a	Amplicon	Day 365	1001270	0.2412	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146875	1001298.000000B5.031115.QvJNI	Amplicon	Day 0	1001298	0.1782	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146876	1001295.0F2.030215.oF6Or	Amplicon	Day 7	1001295	0.2081	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146877	1001287.0F3.022015.NSqbV	Amplicon	Day 7	1001287	0.2618	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146878	1001287.0B1.021715.WhOee	Amplicon	Day 0	1001287	0.0524	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146879	1001295.0B2.MMDDYY.4JPhf	Amplicon	Day 0	1001295	0.0313	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146880	1001295.000000H4.042215.Yf2Hc	Amplicon	Day 56	1001295	0.3268	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146881	1001286.0F1.022315.r7MV2	Amplicon	Day 7	1001286	0.1442	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146882	1001286.0E3.021315.lWXoK	Amplicon	Day 2	1001286	0.0363	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146883	1001287.000000H5.051215.ohsH5	Amplicon	Day 56	1001287	0.0899	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146884	1001287.000000G5.032415.m85eI	Amplicon	Day 28	1001287	0.1209	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146887	1001094.000000I4.072715.xPXoo	Amplicon	Day 182	1001094	0.2122	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146888	1001094.000000J4.101915.mvIx1	Amplicon	Day 365	1001094	0.4767	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146893	1001094.0A5.050514.Iy6D5	Amplicon	Day -7	1001094	0.1962	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146894	1001094.0B5.050714.F2gLY	Amplicon	Day 0	1001094	0.1758	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146895	1001298.000000E4.031215.57ISF	Amplicon	Day 2	1001298	0.2012	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146896	1001298.000000F4.031815.WEIj8	Amplicon	Day 7	1001298	0.0117	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146897	1001298.000000H3.051115.9FlUP	Amplicon	Day 56	1001298	0.2853	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146898	1001298.000000I5.120215.a3xsI	Amplicon	Day 182	1001298	0.1089	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146899	1001301.000000B4.052715.H6qnV	Amplicon	Day 0	1001301	0.0168	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146900	1001301.000000E4.052915.WJ6Yu	Amplicon	Day 2	1001301	0.2448	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146901	1001301.000000I4.121015.APWcD	Amplicon	Day 182	1001301	0.1019	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146902	1001302.000000B5.052715.fbEp8	Amplicon	Day 0	1001302	0.2988	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146903	1001311.000000F3.031015.NREom	Amplicon	Day 7	1001311	0.0312	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146904	1001311.000000H3.051515.3Qldv	Amplicon	Day 56	1001311	0.0568	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146917	1001270.0G3.121514.3qetX	Amplicon	Day 28	1001270	0.2216	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146918	1001270.0F1.112414.AK1kR	Amplicon	Day 7	1001270	0.1782	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146919	1001271.0B5.111814.NXp2D	Amplicon	Day 0	1001271	0.3305	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146920	1001270.0H3.011215.QQ1aE	Amplicon	Day 56	1001270	0.1871	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146921	1001272.000000E4.112114.Ypvnw	Amplicon	Day 2	1001272	0.2359	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146922	1001272.000000B3.111814.WR1M9	Amplicon	Day 0	1001272	0.0391	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146931	1001239.0C2.091214.rlwn5	Amplicon	Day 0	1001239	0.0509	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146932	1001239.0B4.091114.Nucre	Amplicon	Day 0	1001239	0.0383	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146943	1001275.0B5.111914.WzpY1	Amplicon	Day 0	1001275	0.2386	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146944	1001278.000000I3.101215.0Xxi3	Amplicon	Day 182	1001278	0.097	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146945	1001278.0B3.112014.m1e8t	Amplicon	Day 0	1001278	0.06	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146946	1001278.0E1.112414.kD4sY	Amplicon	Day 2	1001278	0.2662	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146947	1001274.0B1.111914.rKfMe	Amplicon	Day 0	1001274	0.0951	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146948	1001274.0D1.112014.r9QQ0	Amplicon	Day 1	1001274	0.0917	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146949	1001274.0G2.121714.xV1td	Amplicon	Day 28	1001274	0.1607	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146950	1001274.0H3.011315.jXX7G	Amplicon	Day 56	1001274	0.1504	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146951	1001278.0F3.112514.YGeWw	Amplicon	Day 7	1001278	0.2474	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146952	1001278.0G2.121714.kMPQQ	Amplicon	Day 28	1001278	0.1463	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146953	1001254.000000I5.070915.vBV5s	Amplicon	Day 182	1001254	0.3209	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146954	1001254.000000F3.102314.1dSmG	Amplicon	Day 1	1001254	0.4406	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146985	1001216.0H5.100214.zyd8U	Amplicon	Day 56	1001216	0.2362	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146986	1001217.0B5.082014.BBl29	Amplicon	Day 0	1001217	0.285	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146987	1001166.0H3.091114.nvTQW	Amplicon	Day 56	1001166	0.015	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146988	1001174.0B4.070914.4sRDc	Amplicon	Day 0	1001174	0.3776	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146989	1001175.0B5.071014.QMRYC	Amplicon	Day 0	1001175	0.1676	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6146990	1001216.000000I4.090415.JT9Xi	Amplicon	Day 182	1001216	0.2208	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147001	1001286.000000G3.031215.JSRze	Amplicon	Day 28	1001286	0.1818	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147002	1001286.0B2.021015.zYGNN	Amplicon	Day 0	1001286	0.0708	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147003	1001285.0B3.021015.cHJ9g	Amplicon	Day 0	1001285	0.1044	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147004	1001285.0F1.021815.ndoeJ	Amplicon	Day 7	1001285	0.1359	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147005	1001285.000000H4.040815.NQ9h4	Amplicon	Day 56	1001285	0.0003	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147006	1001285.000000I3.120715.DsapW	Amplicon	Day 182	1001285	0.4055	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147007	1001283.0B5.021015.24pyd	Amplicon	Day 0	1001283	0.3111	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147008	1001285.000000G4.031215.PYLFa	Amplicon	Day 28	1001285	0.1004	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147009	1001283.0B3.021715.1Rana	Amplicon	Day 0	1001283	0.4218	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147010	1001283.0B3.030415.gXiYx	Amplicon	Day 0	1001283	0.1889	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147011	1001098.0B5.050814.QcfOF	Amplicon	Day 0	1001098	0.3251	Fecal microbiota transplantation(donor)		H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147012	1001095.0H5.072814.TI4x4	Amplicon	Day 56	1001095	0.1323	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147013	1001094.0F4.051614.WGX52	Amplicon	Day 7	1001094	0.2051	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147014	1001094.0C2.050814.agvhX	Amplicon	Day 0	1001094	0.121	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147015	1001095.000000J4.102015.k33A0	Amplicon	Day 365	1001095	0.1979	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147016	1001095.000000I3.070915.VdbtH	Amplicon	Day 182	1001095	0.1669	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147017	1001095.0C2.050814.fzDMH	Amplicon	Day 0	1001095	0.0392	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147018	1001095.0A5.050514.OLCN3	Amplicon	Day -7	1001095	0.1001	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147019	1001095.0G5.061014.or91c	Amplicon	Day 28	1001095	0.5198	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147020	1001095.0F5.051514.jkT6Y	Amplicon	Day 7	1001095	0.1602	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147079	EFZ358787A	Amplicon		1106699	0.036221098			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147080	EFZ306915A	Amplicon		1106675	0.185050505			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147081	EFZ358773A	Amplicon		1106691	0.065942371			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147082	EFZ306944A	Amplicon		1106615	0.153635779			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147083	EFZ306986A	Amplicon		1106630	0.064464671			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147084	EFZ306935A	Amplicon		1106611	0.083210531			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147085	EFZ306942A	Amplicon		1106613	0.091532099			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147086	EFZ158082A	Amplicon		1100650	0.07842144			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147087	EFZ358791A	Amplicon		1106763	0.012296609			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147088	EFZ358814A	Amplicon		1106765	0.112373804			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147089	EFZ202984A	Amplicon		1101614	0.062185701			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147090	EFZ206724A	Amplicon		1101631	0.092142007			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147091	EFZ206672A	Amplicon		1101634	0.009938627			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147092	EFZ209545A	Amplicon		1101636	0.043662851			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147093	EFZ362536A	Amplicon		1101638	0.063861023			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147094	EFZ209537A	Amplicon		1101642	0.089944534			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147095	EFZ202895A	Amplicon		1101643	0.156827139			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147096	EFZ237261A	Amplicon		1101646	0.236311651			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147097	EFZ206631A	Amplicon		1101649	0.124832415			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147098	EFZ206736A	Amplicon		1101652	0.114014414			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147099	EFZ161384A	Amplicon		1100640	0.024443837			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147100	EFZ155571A	Amplicon		1100639	0.052993889			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147101	EFZ155547A	Amplicon		1100624	0.220446678			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147102	EFZ161402A	Amplicon		1100623	0.013314779			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147103	EFZ146862A	Amplicon		1100626	0.193651252			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147104	EFZ116300A	Amplicon		1100625	0.041601348			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147105	EFZ158056A	Amplicon		1100630	0.044434203			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147106	EFZ146877A	Amplicon		1100627	0.030326877			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147107	EFZ155641A	Amplicon		1100638	0.087179372			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147108	EFZ195081A	Amplicon		1100634	0.063389433			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147109	EFZ360370A	Amplicon		1103342	0.225993377			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147110	EFZ360325A	Amplicon		1103335	0.209433787			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147111	EFZ360362A	Amplicon		1103332	0.131233847			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147112	EFZ360323A	Amplicon		1103330	0.162687289			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147113	EFZ362518A	Amplicon		1103250	0.131111241			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147114	EFZ360353A	Amplicon		1103244	0.088699539			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147115	EFZ362515A	Amplicon		1103243	0.117266949			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147116	EFZ358651A	Amplicon		1103238	0.174534861			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147117	EFZ362508A	Amplicon		1103352	0.114868444			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147118	EFZ360335A	Amplicon		1103351	0.180594037			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147119	EFZ362497A	Amplicon		1106869	0.097892558			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147120	EFZ362533A	Amplicon		1106868	0.189552793			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147121	EFZ358614A	Amplicon		1106866	0.075959887			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147122	EFZ358621A	Amplicon		1106861	0.143327035			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147126	EFZ360358A	Amplicon		1106870	0.222900511			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147129	EFZ306982A	Amplicon		1101416	0.198199309			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147130	EFZ202992A	Amplicon		1101410	0.066846419			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147131	EFZ306947A	Amplicon		1101327	0.243685817			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147132	EFZ207199A	Amplicon		1101323	0.11654068			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147133	EFZ202933A	Amplicon		1101312	0.119746325			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147134	EFZ221766A	Amplicon		1101246	0.116763006			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147135	EFZ210575A	Amplicon		1101402	0.201423487			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147136	EFZ306971A	Amplicon		1101377	0.112608455			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147137	EFZ306922A	Amplicon		1101369	0.324467637			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147138	EFZ209578A	Amplicon		1101364	0.101442181			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147139	EFZ306963A	Amplicon		1103456	0.116526929			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147140	EFZ358659A	Amplicon		1103457	0.073670131			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147141	EFZ209523A	Amplicon		1100324	0.178919708			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147142	EFZ51386A	Amplicon		1100329	0.018172915			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147143	EFZ155555A	Amplicon		1100320	0.04699693			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147144	EFZ50715A	Amplicon		1100322	0.019951238			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147145	EFZ155684A	Amplicon		1100315	0.197814777			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147146	EFZ50937A	Amplicon		1100316	0.089149964			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147147	EFZ51374A	Amplicon		1100304	0.06364428			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147148	EFZ155689A	Amplicon		1100312	0.151555229			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147149	EFZ221634A	Amplicon		1103441	0.02618566			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147150	EFZ49825A	Amplicon		1100330	0.064315194			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147151	EFZ50913A	Amplicon		1100332	0.122473872			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147158	EFZ237252A	Amplicon		1102381	0.269801594			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147159	EFZ237177A	Amplicon		1102432	0.211746267			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147160	EFZ221806A	Amplicon		1102346	0.16891054			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147161	EFZ221821A	Amplicon		1102350	0.377665966			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147162	EFZ211975A	Amplicon		1102341	0.196972937			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147163	EFZ221731A	Amplicon		1102345	0.223243802			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147164	EFZ237194A	Amplicon		1102331	0.280532044			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147165	EFZ211992A	Amplicon		1102340	0.227156152			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147166	EFZ209457A	Amplicon		1102252	0.103223198			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147167	EFZ237237A	Amplicon		1102308	0.170851314			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147168	EFZ358774A	Amplicon		1103645	0.084605835			H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147169	EFZ358779A	Amplicon		1103632	0.083374445			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147170	EFZ306996A	Amplicon		1103653	0.142057569			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147171	EFZ358620A	Amplicon		1103646	0.055110464			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147172	EFZ306911A	Amplicon		1103541	0.108835825			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147173	EFZ360381A	Amplicon		1103534	0.252565866			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147174	EFZ358767A	Amplicon		1103555	0.131610942			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147175	EFZ358781A	Amplicon		1103548	0.154387522			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147176	EFZ306988A	Amplicon		1106597	0.058531447			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147177	EFZ221772A	Amplicon		1106556	0.395704057			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147178	EFZ240409A	Amplicon		1101902	0.198202339			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147179	EFZ210612A	Amplicon		1101830	0.159481746			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147180	EFZ221701A	Amplicon		1101821	0.168788046			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147181	EFZ206696A	Amplicon		1101819	0.045917442			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147182	EFZ210645A	Amplicon		1101812	0.241036112			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147183	EFZ191376A	Amplicon		1101780	0.149405169			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147184	EFZ207136A	Amplicon		1101727	0.038781988			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147185	EFZ207183A	Amplicon		1101704	0.141884157			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147186	EFZ191369A	Amplicon		1101657	0.028148179			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147187	EFZ202911A	Amplicon		1101653	0.071624177			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147190	EFZ155711A	Amplicon		1100618	0.070769781			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147191	EFZ155465A	Amplicon		1100622	0.047246329			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147192	EFZ155657A	Amplicon		1100550	0.040079469			UC	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147193	EFZ155474A	Amplicon		1100553	0.101987053			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147194	EFZ362520A	Amplicon		1100539	0.282343096			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147195	EFZ158482A	Amplicon		1100547	0.092771493			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147196	EFZ119028A	Amplicon		1100609	0.048655724			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147197	EFZ117438A	Amplicon		1100610	0.218114825			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147198	EFZ158175A	Amplicon		1100554	0.216367671			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147199	EFZ117416A	Amplicon		1100601	0.089966136			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147200	EFZ306939A	Amplicon		1102975	0.178000792			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147201	EFZ243431A	Amplicon		1103012	0.196839414			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147202	EFZ360330A	Amplicon		1102937	0.316897724			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147203	EFZ358818A	Amplicon		1102947	0.156301082			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147204	EFZ362524A	Amplicon		1103132	0.095066112			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147205	EFZ358596A	Amplicon		1103156	0.077885827			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147206	EFZ362502A	Amplicon		1103041	0.224382281			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147207	EFZ360373A	Amplicon		1103048	0.264805129			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147208	EFZ358630A	Amplicon		1103157	0.070371504			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147209	EFZ306992A	Amplicon		1103192	0.068625			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147210	EFZ50909A	Amplicon		1100301	0.098457989			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147211	EFZ51998A	Amplicon		1100247	0.056551293			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147212	EFZ52232A	Amplicon		1100245	0.027405393			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147213	EFZ53116A	Amplicon		1100241	0.023132425			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147214	EFZ51712A	Amplicon		1100225	0.052723277			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147215	EFZ51392A	Amplicon		1100224	0.059412356			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147216	EFZ51095A	Amplicon		1100223	0.018550803			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147217	EFZ53110A	Amplicon		1100204	0.023776658			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147219	EFZ68545A	Amplicon		1100149	0.039376433			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147230	EFZ163195A	Amplicon		1101002	0.094501798			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147231	EFZ158211A	Amplicon		1101004	0.062878419			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147232	EFZ210560A	Amplicon		1100919	0.137387364			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147233	EFZ163171A	Amplicon		1101001	0.081277307			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147234	EFZ210526A	Amplicon		1100903	0.077591169			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147235	EFZ195103A	Amplicon		1100905	0.149724038			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147236	EFZ155729A	Amplicon		1100859	0.174781471			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147237	EFZ221781A	Amplicon		1100870	0.258374793			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147238	EFZ155718A	Amplicon		1101011	0.149399221			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147239	EFZ158469A	Amplicon		1101013	0.034221762			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147241	EFZ116308A	Amplicon		1100511	0.068470142			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147242	EFZ116210A	Amplicon		1100506	0.132417461			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147243	EFZ237297A	Amplicon		1100478	0.055473561			CD	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147244	EFZ158066A	Amplicon		1100470	0.010788371			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147245	EFZ155588A	Amplicon		1100532	0.037856387			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147246	EFZ243438A	Amplicon		1100527	0.018499194			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147247	EFZ221667A	Amplicon		1100525	0.032032032			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147248	EFZ158088A	Amplicon		1100523	0.139924228			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147249	EFZ161418A	Amplicon		1100538	0.10377135			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147250	EFZ158072A	Amplicon		1100537	0.05739915			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147251	EFZ163219A	Amplicon		1100835	0.086162832			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147252	EFZ161408A	Amplicon		1100832	0.201896933			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147253	EFZ358799A	Amplicon		1102754	0.107266152			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147254	EFZ306925A	Amplicon		1102603	0.00615942			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147255	EFZ358624A	Amplicon		1102835	0.316058002			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147256	EFZ362500A	Amplicon		1102757	0.213487526			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147257	EFZ358889A	Amplicon		1102856	0.063358495			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147258	EFZ360349A	Amplicon		1102845	0.467583497			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147259	EFZ358808A	Amplicon		1102860	0.095259765			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147260	EFZ360368A	Amplicon		1102859	0.100709528			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147261	EFZ360338A	Amplicon		1102932	0.283795273			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147262	EFZ362530A	Amplicon		1102930	0.100579976			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147263	EFZ209555A	Amplicon		1102038	0.121032728			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147264	EFZ48792A	Amplicon		1100122	0.09164521			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147265	EFZ53159A	Amplicon		1100132	0.091387316			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147268	EFZ51972A	Amplicon		1100128	0.036526004			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147273	EFZ221648A	Amplicon		1101910	0.293243676			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147277	EFZ306980A	Amplicon		1102538	0.43059442			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147278	EFZ306977A	Amplicon		1102540	0.152213551			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147279	EFZ306949A	Amplicon		1102545	0.357563694			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147280	EFZ306953A	Amplicon		1102553	0.21776445			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147281	EFZ358654A	Amplicon		1102508	0.346466583			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147282	EFZ358615A	Amplicon		1102521	0.099009029			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147283	EFZ243397A	Amplicon		1102533	0.177455357			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147284	EFZ243421A	Amplicon		1102536	0.094709471			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147285	EFZ49815A	Amplicon		1100121	0.081673534			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147286	EFZ306960A	Amplicon		1102556	0.12057302			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147287	EFZ306965A	Amplicon		1102558	0.015399423			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147288	EFZ51354A	Amplicon		1100117	0.076585439			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147289	EFZ50708A	Amplicon		1100145	0.039843335			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147290	EFZ51990A	Amplicon		1100141	0.019569584			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147291	EFZ202927A	Amplicon		1102045	0.014815331			H			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147292	EFZ202918A	Amplicon		1102046	0.228156478			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147293	EFZ209530A	Amplicon		1100127	0.196165476			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147294	EFZ207110A	Amplicon		1102039	0.192285989			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147295	EFZ210510A	Amplicon		1102015	0.112641453			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147296	EFZ237158A	Amplicon		1102029	0.305848514			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147297	EFZ51960A	Amplicon		1100102	0.049078791			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147298	EFZ51087A	Amplicon		1100068	0.072472739			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147299	EFZ237283A	Amplicon		1101903	0.576728224			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147300	EFZ207207A	Amplicon		1101909	0.130768966			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147301	EFZ195121A	Amplicon		1101029	0.134798155			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147302	EFZ195049A	Amplicon		1101028	0.099991178			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147303	EFZ161427A	Amplicon		1101035	0.112484229			UC	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147304	EFZ195062A	Amplicon		1101034	0.10544794			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147305	EFZ195129A	Amplicon		1101015	0.055841855			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147306	EFZ195091A	Amplicon		1101014	0.054746174			UC	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147307	EFZ195067A	Amplicon		1101027	0.098818189			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147308	EFZ163213A	Amplicon		1101020	0.22471042			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147309	EFZ210533A	Amplicon		1101057	0.08875442			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147310	EFZ209587A	Amplicon		1101050	0.005719733			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147311	EFZ117431A	Amplicon		1100451	0.002203347			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147312	EFZ117424A	Amplicon		1100453	0.159078245			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147313	EFZ360376A	Amplicon		1100432	0.311124588			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147314	EFZ362505A	Amplicon		1100437	0.277119114			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147315	EFZ51964A	Amplicon		1100443	0.074965676			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147316	EFZ358603A	Amplicon		1100448	0.050519319			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147317	EFZ51720A	Amplicon		1100422	0.035524801			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147318	EFZ306969A	Amplicon		1100425	0.278994925			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147319	EFZ155612A	Amplicon		1100428	0.136256282			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147320	EFZ51706A	Amplicon		1100430	0.021614767			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147329	EFZ360345A	Amplicon		1103355	0.228872577			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147331	EFZ306920A	Amplicon		1103444	0.087509211			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147332	EFZ237275A	Amplicon		1103445	0.079421952			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147333	EFZ237227A	Amplicon		1103446	0.339895134			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147334	EFZ221814A	Amplicon		1103448	0.351086569			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147335	EFZ240425A	Amplicon		1103449	0.038979616			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147336	EFZ243454A	Amplicon		1103451	0.225253885			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147337	EFZ358796A	Amplicon		1106805	0.021517662			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147338	EFZ358821A	Amplicon		1106822	0.107363524			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147339	EFZ358611A	Amplicon		1106839	0.025931095			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147340	EFZ360363A	Amplicon		1106841	0.033436828			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147341	EFZ358601A	Amplicon		1106787	0.134332352			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147342	EFZ358639A	Amplicon		1106789	0.126248627			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147343	EFZ360340A	Amplicon		1106791	0.101989543			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147344	EFZ358627A	Amplicon		1106799	0.049578181			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147345	EFZ358638A	Amplicon		1106842	0.092719986			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147346	EFZ358811A	Amplicon		1106858	0.354229783			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147349	EFZ209483A	Amplicon		1101613	0.107934445			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147350	EFZ358646A	Amplicon		1101611	0.2804			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147351	EFZ207120A	Amplicon		1101547	0.001943027			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147352	EFZ202973A	Amplicon		1101540	0.005059289			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147353	EFZ211983A	Amplicon		1101550	0.265303204			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147354	EFZ243447A	Amplicon		1101548	0.310294863			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147355	EFZ209570A	Amplicon		1101560	0.174677615			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147356	EFZ207153A	Amplicon		1101556	0.131437076			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147357	EFZ202943A	Amplicon		1101610	0.232138951			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147358	EFZ358607A	Amplicon		1101587	0.366741171			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147359	EFZ163181A	Amplicon		1100655	0.141342139			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147363	EFZ158108A	Amplicon		1100701	0.115683482			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147364	EFZ163230A	Amplicon		1100706	0.158595347			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147365	EFZ210628A	Amplicon		1101175	0.019430032			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147366	EFZ146866A	Amplicon		1100641	0.047674553			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147367	EFZ158474A	Amplicon		1100644	0.02386409			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147368	EFZ158096A	Amplicon		1100647	0.040274305			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147369	EFZ158193A	Amplicon		1100649	0.067210337			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147370	EFZ210519A	Amplicon		1101215	0.081973834			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147371	EFZ211967A	Amplicon		1101237	0.063320195			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147372	EFZ163164A	Amplicon		1100658	0.01847698			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147373	EFZ306956A	Amplicon		1100685	0.160659114			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147374	EFZ221748A	Amplicon		1101140	0.110703364			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147375	EFZ360355A	Amplicon		1101157	0.163900862			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147376	EFZ209489A	Amplicon		1102009	0.061840586			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147377	EFZ202949A	Amplicon		1101209	0.137006043			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147378	EFZ221797A	Amplicon		1101117	0.232087999			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147379	EFZ202958A	Amplicon		1101118	0.182064903			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147380	EFZ221718A	Amplicon		1101130	0.277542572			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147381	EFZ360386A	Amplicon		1101131	0.184951981			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147382	EFZ50947A	Amplicon		1100406	0.065656345			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147383	EFZ240496A	Amplicon		1100358	0.098867657			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147384	EFZ117407A	Amplicon		1100409	0.141080197			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147385	EFZ52258A	Amplicon		1100408	0.037852286			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147386	EFZ53169A	Amplicon		1100343	0.077804492			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147387	EFZ51700A	Amplicon		1100334	0.05387606			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147388	EFZ155562A	Amplicon		1100345	0.053749233			CD	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147389	EFZ49619A	Amplicon		1100344	0.056360626			UC	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147390	EFZ158490A	Amplicon		1100417	0.004181257			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147391	EFZ116296A	Amplicon		1100411	0.024654588			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147402	EFZ237267A	Amplicon		1102451	0.259368732			CD	Yes	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147403	EFZ240416A	Amplicon		1102447	0.035437904			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147404	EFZ240337A	Amplicon		1102444	0.094030832			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147405	EFZ221759A	Amplicon		1102433	0.316721311			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147406	EFZ207104A	Amplicon		1102502	0.142668819			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147407	EFZ358801A	Amplicon		1102501	0.41755161			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147408	EFZ306931A	Amplicon		1102459	0.171814026			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147409	EFZ240401A	Amplicon		1102456	0.093071786			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147410	EFZ243465A	Amplicon		1102507	0.132874637			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147411	EFZ221682A	Amplicon		1102506	0.517636509			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147412	EFZ206750A	Amplicon		1102154	0.101962482			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147413	EFZ210583A	Amplicon		1102151	0.169998338			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147414	EFZ206687A	Amplicon		1102131	0.146497258			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147415	EFZ221791A	Amplicon		1102109	0.214699471			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147416	EFZ207144A	Amplicon		1102146	0.05122207			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147417	EFZ206623A	Amplicon		1102134	0.017854831			CD			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147418	EFZ210567A	Amplicon		1102053	0.068513473			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147419	EFZ209563A	Amplicon		1102048	0.256530994			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147420	EFZ202902A	Amplicon		1102060	0.195380478			UC			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147421	EFZ207191A	Amplicon		1102057	0.030329247			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147422	EFZ358769A	Amplicon		1106696	0.154364287			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147431	EFZ209498A	Amplicon		1102233	0.041067263			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147432	EFZ237219A	Amplicon		1102232	0.584977721			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147435	EFZ206639A	Amplicon		1102157	0.083116124			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147436	EFZ207167A	Amplicon		1102156	0.151864393			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147437	EFZ237140A	Amplicon		1102224	0.2139041			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147438	EFZ210636A	Amplicon		1102159	0.137731853			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147439	EFZ209514A	Amplicon		1102250	0.084023175			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147440	EFZ237211A	Amplicon		1102240	0.253976551			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147441	EFZ209473A	Amplicon		1102237	0.082481835			UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147442	EFZ207159A	Amplicon		1102235	0.136094389			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147443	EFZ210619A	Amplicon		1101536	0.206250751			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147444	EFZ191395A	Amplicon		1101538	0.277268632			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147445	EFZ210605A	Amplicon		1101456	0.181697309			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147446	EFZ207177A	Amplicon		1101457	0.058333189			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147447	EFZ209465A	Amplicon		1101437	0.170496808			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147448	EFZ209507A	Amplicon		1101449	0.124897217			H	No	Control	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147449	EFZ191386A	Amplicon		1101504	0.103352834			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147450	EFZ206743A	Amplicon		1101518	0.065859396			CD	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147451	EFZ243414A	Amplicon		1101463	0.157742402			CD	Yes	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147452	EFZ210542A	Amplicon		1101503	0.179035219			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147464	EFZ163204A	Amplicon		1100826	0.073609773			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147465	EFZ360380A	Amplicon		1100812	0.119552259			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147466	EFZ155482A	Amplicon		1100801	0.107411431			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147467	EFZ195043A	Amplicon		1100758	0.044491547			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147468	EFZ195113A	Amplicon		1100756	0.260697615			UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147469	EFZ195074A	Amplicon		1100751	0.138152402			CD	No	Active	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147470	EFZ243471A	Amplicon		1100740	0.123860903			UC	No	Inactive	Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6147471	EFZ163187A	Amplicon		1100709	0.049395557			CD	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649094	P007.CsU0	Amplicon	1	P007	0.037194505		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649095	P009.sRiC	Amplicon	2	P009	0.062906682		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649098	P003.YZEG	Amplicon	1	P003	0.015453874		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649101	P008.wU4X	Amplicon		P008	0.058911492		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649103	P006.EcGr	Amplicon		P006	0.033271671		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649106	P011.NlJZ	Amplicon		P011	0.090641905		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649107	P001.vy4Z	Amplicon		P001	0.002568109		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649096	P012.nLP4	Amplicon	2	P012	0.098291457		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649097	P002.7VyA	Amplicon	1	P002	0.015168944		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649099	P015.PT52	Amplicon	2	P015	0.19670212		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649100	P013.zehz	Amplicon	2	P013	0.103145482		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649102	P014.FaGZ	Amplicon	1	P014	0.133328378		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649104	P005.SJvl	Amplicon		P005	0.019258462		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649105	P010.2WCC	Amplicon		P010	0.081648104		Ileal pouch–anal anastomosis	UC	Yes		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
+SRR6649108	P004.hIrc	Amplicon		P004	0.016759411		Ileal pouch–anal anastomosis	UC	No		Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
