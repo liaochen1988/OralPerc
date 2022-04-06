@@ -1,4 +1,5 @@
 sample-id	sample-name	sequencing-assay	time-point	subject-id	microbial-density	reference-date	treatment	disease	antibiotic-exposure	detailed-diagnosis	body-site	body-sub-site	study	quantitative-assay	patient-geo
+#q2:types	categorical	categorical	categorical	categorical	numeric	categorical	categorical	categorical	categorical	categorical	categorical	categorical	categorical	categorical	categorical
 SRR6146647	1001216.0B5.081914.jgbsq	Amplicon	Day 0	1001216	0.1221	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
 SRR6146648	1001216.0C2.082014.o3lcl	Amplicon	Day 0	1001216	0.0484	Fecal microbiota transplantation(pre)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
 SRR6146649	1001216.0F5.082614.doth3	Amplicon	Day 7	1001216	0.1835	Fecal microbiota transplantation(post)		rCDI			Gastrointestinal_tract	Stool	ibd_contijoch2019_elife	DNA/mass	United States
